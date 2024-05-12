@@ -17,7 +17,7 @@ describe('SearchBar', () => {
 
   it('renders without crashing', () => {
     render(<SearchBar />);
-    const searchBar = screen.getByRole('textbox');
+    const searchBar = screen.getByTestId('search');
     expect(searchBar).toBeInTheDocument();
   });
   it('updates search text on input change', () => {

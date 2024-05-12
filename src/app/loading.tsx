@@ -8,15 +8,15 @@ export default function Loading() {
         <Skeleton className="h-10 w-full" />
         <Skeleton className="h-10 w-[180px]" />
       </section>
-      <div className="f-full container flex items-center justify-center gap-2 flex-wrap">
+      <div className="f-full container py-4 mt-24 flex items-center justify-center gap-2 flex-wrap">
         {[...Array(POKEMONS_PER_PAGE)].map((_, i) => (
           <div
             key={i}
-            className="m-5 p-4 h-fit w-[14rem] flex flex-col items-center justify-start rounded-2xl"
+            className="m-5 p-4 h-fit w-[14rem] flex flex-col items-center justify-start rounded-2xl border-2"
           >
             <Skeleton className="h-4 w-11/12" />
             <div className="h-48 w-48 p-8">
-              <Skeleton className="w-full h-full rounded-xl" />
+              <Skeleton className="w-full h-full rounded-full" />
             </div>
           </div>
         ))}

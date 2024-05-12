@@ -13,7 +13,7 @@ export default async function PokemonPage({
   const species = await getPokemonSpeciesByName({ name: params.name });
 
   return (
-    <main className="container flex min-h-screen flex-col items-center justify-center pt-[120px] relative lg:pt-0">
+    <main className="container flex min-h-screen flex-col items-center justify-center pt-[150px] relative">
       <h1 className="text-5xl font-bold text-primary mb-4">
         {capitalizeFirstLetter(pokemon.name)}
       </h1>
