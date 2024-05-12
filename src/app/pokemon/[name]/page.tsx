@@ -1,7 +1,7 @@
 export default async function PokemonPage({
   params
 }: {
-  params: { slug: string };
+  params: { name: string };
 }) {
   return (
     <main className="container flex min-h-screen flex-col items-center justify-center pt-[120px] relative">
