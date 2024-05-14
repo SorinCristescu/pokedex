@@ -8,12 +8,11 @@ import {
   SelectValue
 } from '@/components/ui/select';
 import { capitalizeFirstLetter } from '@/lib/utils';
-import { Type } from '@/types/pokemon';
+import { Type } from '@/types/Pokemon';
 import { useRouter, useSearchParams } from 'next/navigation';
 
 interface FilterProps {
   types: Type[];
-  search?: string;
 }
 
 const Filter: React.FC<FilterProps> = ({ types }) => {
@@ -42,7 +41,11 @@ const Filter: React.FC<FilterProps> = ({ types }) => {
         <SelectItem value="all">All</SelectItem>
         {types &&
           types.map((type) => (
-            <SelectItem key={type.url} value={type.name ? type.name : ''}>
+            <SelectItem
+              data-testid="select-item"
+              key={type.url}
+              value={type.name ? type.name : ''}
+            >
               {capitalizeFirstLetter(type.name)}
             </SelectItem>
           ))}

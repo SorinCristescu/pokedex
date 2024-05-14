@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import ThemeToggle from './theme-toggle';
+import ThemeToggle from '../ThemeToggle';
 
 export const Navbar = () => {
   return (
-    <header className="fixed w-full bg-background z-10">
+    <header data-testid="header" className="fixed w-full bg-background z-10">
       <nav
         className="mx-auto container flex items-center justify-between p-6 lg:px-8"
         aria-label="Global"

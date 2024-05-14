@@ -8,10 +8,10 @@ import {
 } from 'usehooks-ts';
 import { GridLoader } from 'react-spinners';
 
-import { Pokemon, Types } from '@/types/pokemon';
+import { Pokemon, Types } from '@/types/Pokemon';
 import { useSearchParams } from 'next/navigation';
 import { delay } from '@/lib/utils';
-import PokemonCard from './pokemon-card';
+import PokemonCard from '../PokemonCard';
 
 const PokemonsList = ({
   initialPokemons

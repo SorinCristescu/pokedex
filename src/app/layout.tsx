@@ -1,6 +1,6 @@
-import { Navbar } from '@/components/navbar';
+import { Navbar } from '@/components/Navbar';
 import { cn } from '@/lib/utils';
-import { ThemeProvider } from '@/providers/theme-provider';
+import { ThemeProvider } from '@/providers/ThemeProvider';
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import { Inter as FontSans } from 'next/font/google';

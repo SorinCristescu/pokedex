@@ -14,10 +14,13 @@ export default async function PokemonPage({
 
   return (
     <main className="container flex min-h-screen flex-col items-center justify-center pt-[150px] relative">
-      <h1 className="text-5xl font-bold text-primary mb-4">
+      <h1 data-testid="title" className="text-5xl font-bold text-primary mb-4">
         {capitalizeFirstLetter(pokemon.name)}
       </h1>
-      <p className="text-xl text-muted-foreground text-center lg:w-1/2 ">
+      <p
+        data-testid="description"
+        className="text-xl text-muted-foreground text-center lg:w-1/2 "
+      >
         {species.flavor_text_entries[0].flavor_text}
       </p>
       <div className="w-full flex flex-col items-center justify-center md:flex-row md:items-center md:justify-around">

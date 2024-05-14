@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { useIsomorphicLayoutEffect } from 'usehooks-ts';
+import { Button } from '@/components/ui/button';
 
 export default function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
@@ -26,6 +27,13 @@ export default function ThemeToggle() {
   };
 
   return (
-    <div onClick={handleTheme}>{theme === 'light' ? <Moon /> : <Sun />}</div>
+    <Button
+      variant="ghost"
+      data-testid="toggle"
+      onClick={handleTheme}
+      className="w-14 h-14 rounded-full"
+    >
+      {theme === 'light' ? <Moon className="w-5 h-5" /> : <Sun />}
+    </Button>
   );
 }

@@ -7,7 +7,7 @@ import {
   POKEMONS_QUERY_OFFSET
 } from '@/constants';
 import { getPokemonByName } from './getPokemonByName';
-import { SearchParams } from '@/types/params';
+import { SearchParams } from '@/types/Params';
 import { buildImageSrc } from '@/lib/utils';
 
 export async function fetchPokemons({

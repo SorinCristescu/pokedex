@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { Pokemon } from '@/types/pokemon';
+import { Pokemon } from '@/types/Pokemon';
 import { capitalizeFirstLetter } from '@/lib/utils';
 // import { SkeletonCard } from './skeleton-card';
 
@@ -12,14 +12,19 @@ const PokemonCard = ({ pokemon }: { pokemon: Pokemon }): React.JSX.Element => {
 
   return (
     <div
-      className="m-5 p-4 h-fit w-[14rem] flex flex-col items-center justify-start rounded-2xl bg-neutral-200 bg-opacity-50 shadow-xl shadow-neutral-300 backdrop-blur-sm backdrop-filter dark:bg-neutral-700 dark:bg-opacity-50 dark:shadow-neutral-700"
+      data-testid="card"
+      className="m-5 p-4 h-fit w-[14rem] flex flex-col items-center justify-start rounded-2xl bg-neutral-200 bg-opacity-50 shadow-md shadow-neutral-300 backdrop-blur-sm backdrop-filter dark:bg-neutral-700 dark:bg-opacity-50 dark:shadow-neutral-700"
       onClick={handleClick}
     >
-      <h1 className="w-11/12 truncate text-center text-xl font-extrabold text-primary">
+      <h1
+        data-testid="card-label"
+        className="w-11/12 truncate text-center text-xl font-extrabold text-primary"
+      >
         {capitalizeFirstLetter(pokemon.name)}
       </h1>
       <div className="h-48 w-48 relative">
         <Image
+          data-testid="card-image"
           src={pokemon.imageSrc}
           alt={pokemon.name}
           fill

@@ -40,14 +40,18 @@ const SearchBar: React.FC = () => {
   return (
     <div data-testid="search-bar" className="w-full relative">
       <Input
+        data-testid="input"
         type="text"
         className="pl-12"
-        placeholder="SearchPokemon..."
+        placeholder="Search Pokemon..."
         value={text}
         onChange={(e) => debounced(e.target.value)}
       />
       <div className="absolute top-0 left-4 h-full flex items-center justify-center">
-        <SearchIcon className="w-5 h-5 text-muted-foreground" />
+        <SearchIcon
+          data-testid="search-icon"
+          className="w-5 h-5 text-muted-foreground"
+        />
       </div>
     </div>
   );
